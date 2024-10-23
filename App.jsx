@@ -1,9 +1,15 @@
 import React from 'react';
-import {Text, TouchableOpacity, StyleSheet, ScrollView, Button} from 'react-native';
+import {Text, TouchableOpacity, StyleSheet, ScrollView} from 'react-native';
+import TestComp from './components/text-comp';
+import OnPress from './components/on-press';
+import InputComponent from './components/input';
+import Navbar from './components/navbar';
+import Footer from './components/footer';
 
 const HomeScreen = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
+      <Navbar />
       <Text style={styles.title}>জামিআতুল লতীফ রূপগঞ্জ</Text>
       <Text style={styles.subtitle}>একটি প্রাচীন দ্বীনি শিক্ষাপ্রতিষ্ঠান</Text>
 
@@ -11,22 +17,37 @@ const HomeScreen = () => {
         জামিআতুল লতীফ একটি স্বনামধন্য মাদ্রাসা, যেখানে ছাত্রদের কুরআন, হাদিস,
         এবং ইসলামী শিক্ষার পাশাপাশি আধুনিক শিক্ষাও প্রদান করা হয়।
       </Text>
+      <Text style={styles.description}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+        neque aperiam blanditiis voluptate rerum soluta temporibus molestiae,
+        alias voluptatibus fuga laboriosam eligendi modi dolorum dolores quod
+        id, corrupti rem debitis. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Repudiandae neque aperiam blanditiis voluptate rerum
+        soluta temporibus molestiae, alias voluptatibus fuga laboriosam eligendi
+        modi dolorum dolores quod id, corrupti rem debitis. Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Repudiandae neque aperiam
+        blanditiis voluptate rerum soluta temporibus molestiae, alias
+        voluptatibus fuga laboriosam eligendi modi dolorum dolores quod id,
+        corrupti rem debitis.
+      </Text>
       <Text className="bg-red-500">আপনার মাদ্রাসার বার্তা এখানে</Text>
 
+      <InputComponent />
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>যোগাযোগ করুন</Text>
       </TouchableOpacity>
-      <Button  title="যোগাযোগ করুন"/>
+      <OnPress title="Props provided" />
+      <TestComp />
+      <Footer />
     </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
+
     backgroundColor: '#f0f4f8',
   },
   title: {
