@@ -8,7 +8,7 @@ const OnPress = ({title = 'Props not provided'}) => {
   };
   return (
     <View>
-      <Text style={{color: '#343434'}}>{name ? 'OK' : 'No'}</Text>
+      <Text style={{color: '#343434'}}>{name ? 'Okay' : 'No'}</Text>
       <Text>{title}</Text>
       <Button title="Press" color="#000" onPress={pressFunc} />
     </View>

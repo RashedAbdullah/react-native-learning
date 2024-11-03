@@ -18,17 +18,7 @@ const HomeScreen = () => {
         এবং ইসলামী শিক্ষার পাশাপাশি আধুনিক শিক্ষাও প্রদান করা হয়।
       </Text>
       <Text style={styles.description}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-        neque aperiam blanditiis voluptate rerum soluta temporibus molestiae,
-        alias voluptatibus fuga laboriosam eligendi modi dolorum dolores quod
-        id, corrupti rem debitis. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Repudiandae neque aperiam blanditiis voluptate rerum
-        soluta temporibus molestiae, alias voluptatibus fuga laboriosam eligendi
-        modi dolorum dolores quod id, corrupti rem debitis. Lorem ipsum dolor
-        sit amet consectetur adipisicing elit. Repudiandae neque aperiam
-        blanditiis voluptate rerum soluta temporibus molestiae, alias
-        voluptatibus fuga laboriosam eligendi modi dolorum dolores quod id,
-        corrupti rem debitis.
+        Rashed Abdullah
       </Text>
       <Text className="bg-red-500">আপনার মাদ্রাসার বার্তা এখানে</Text>
 
