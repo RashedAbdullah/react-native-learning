@@ -5,15 +5,16 @@ import OnPress from './components/on-press';
 import InputComponent from './components/input';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
+import Grid from './components/grid';
 
 const HomeScreen = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Navbar />
-      <Text style={styles.title}>জামিআতুল লতীফ রূপগঞ্জ</Text>
-      <Text style={styles.subtitle}>একটি প্রাচীন দ্বীনি শিক্ষাপ্রতিষ্ঠান</Text>
+      {/* <Text style={styles.title}>জামিআতুল লতীফ রূপগঞ্জ</Text>
+      <Text style={styles.subtitle}>একটি প্রাচীন দ্বীনি শিক্ষাপ্রতিষ্ঠান</Text> */}
 
-      <Text style={styles.description}>
+      {/* <Text style={styles.description}>
         জামিআতুল লতীফ একটি স্বনামধন্য মাদ্রাসা, যেখানে ছাত্রদের কুরআন, হাদিস,
         এবং ইসলামী শিক্ষার পাশাপাশি আধুনিক শিক্ষাও প্রদান করা হয়।
       </Text>
@@ -27,7 +28,9 @@ const HomeScreen = () => {
         <Text style={styles.buttonText}>যোগাযোগ করুন</Text>
       </TouchableOpacity>
       <OnPress title="Props provided" />
-      <TestComp />
+      <TestComp /> */}
+
+      <Grid />
       <Footer />
     </ScrollView>
   );
