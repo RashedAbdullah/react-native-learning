@@ -1,16 +1,22 @@
 import React from 'react';
-import {Text, TouchableOpacity, StyleSheet, ScrollView} from 'react-native';
+import {StyleSheet, ScrollView} from 'react-native';
 import TestComp from './components/text-comp';
 import OnPress from './components/on-press';
 import InputComponent from './components/input';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 import Grid from './components/grid';
+import StatusBarComp from './components/status-bar';
+import DialogBox from './components/dilaog';
+import AlertBox from './components/alert';
+import ApiDataFetch from './components/api';
+import PlatformComp from './components/platform-comp';
+import SearchComp from './components/search-comp';
 
 const HomeScreen = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Navbar />
+      {/* <Navbar /> */}
       {/* <Text style={styles.title}>জামিআতুল লতীফ রূপগঞ্জ</Text>
       <Text style={styles.subtitle}>একটি প্রাচীন দ্বীনি শিক্ষাপ্রতিষ্ঠান</Text> */}
 
@@ -29,9 +35,14 @@ const HomeScreen = () => {
       </TouchableOpacity>
       <OnPress title="Props provided" />
       <TestComp /> */}
-
-      <Grid />
-      <Footer />
+      {/* <Grid /> */}
+      {/* <StatusBarComp /> */}
+      {/* <DialogBox /> */}
+      {/* <AlertBox /> */}
+      {/* <ApiDataFetch /> */}
+      {/* <PlatformComp /> */}
+      <SearchComp />
+      {/* <Footer /> */}
     </ScrollView>
   );
 };
