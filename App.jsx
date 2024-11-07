@@ -1,93 +1,67 @@
+import {View, Text, Button} from 'react-native';
 import React from 'react';
-import {StyleSheet, ScrollView} from 'react-native';
-import TestComp from './components/text-comp';
-import OnPress from './components/on-press';
-import InputComponent from './components/input';
-import Navbar from './components/navbar';
-import Footer from './components/footer';
-import Grid from './components/grid';
-import StatusBarComp from './components/status-bar';
-import DialogBox from './components/dilaog';
-import AlertBox from './components/alert';
-import ApiDataFetch from './components/api';
-import PlatformComp from './components/platform-comp';
-import SearchComp from './components/search-comp';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import HomePage from './navigations/home';
+import AboutPage from './navigations/about';
+import ProjectsPage from './navigations/projects';
+import SigninPage from './navigations/signin';
+import {createDrawerNavigator} from '@react-navigation/drawer';
+import 'react-native-gesture-handler';
 
-const HomeScreen = () => {
+const Stack = createNativeStackNavigator();
+const Drawer = createDrawerNavigator();
+
+const App = () => {
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      {/* <Navbar /> */}
-      {/* <Text style={styles.title}>জামিআতুল লতীফ রূপগঞ্জ</Text>
-      <Text style={styles.subtitle}>একটি প্রাচীন দ্বীনি শিক্ষাপ্রতিষ্ঠান</Text> */}
+    <>
+      {/* <View>
+        <Text>Rashed Abdullah</Text>
+        <Button title="Test" onPress={() => console.log('Hello Rotues')} />
+      </View> */}
+      <NavigationContainer>
+        <Drawer.Navigator>
+          <Drawer.Screen name="Home" component={HomePage} />
+          <Drawer.Screen name="About" component={AboutPage} />
+          <Drawer.Screen name="Projects" component={ProjectsPage} />
+        </Drawer.Navigator>
 
-      {/* <Text style={styles.description}>
-        জামিআতুল লতীফ একটি স্বনামধন্য মাদ্রাসা, যেখানে ছাত্রদের কুরআন, হাদিস,
-        এবং ইসলামী শিক্ষার পাশাপাশি আধুনিক শিক্ষাও প্রদান করা হয়।
-      </Text>
-      <Text style={styles.description}>
-        Rashed Abdullah
-      </Text>
-      <Text className="bg-red-500">আপনার মাদ্রাসার বার্তা এখানে</Text>
+        {/* <Stack.Navigator
+          screenOptions={{
+            headerTintColor: 'red',
+            headerStyle: {
+              backgroundColor: 'aqua',
+            },
+            contentStyle: {
+              backgroundColor: 'red',
+            },
 
-      <InputComponent />
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>যোগাযোগ করুন</Text>
-      </TouchableOpacity>
-      <OnPress title="Props provided" />
-      <TestComp /> */}
-      {/* <Grid /> */}
-      {/* <StatusBarComp /> */}
-      {/* <DialogBox /> */}
-      {/* <AlertBox /> */}
-      {/* <ApiDataFetch /> */}
-      {/* <PlatformComp /> */}
-      <SearchComp />
-      {/* <Footer /> */}
-    </ScrollView>
+            title: '',
+            headerTitle: () => <Button title="Home" onPress={() => ''} />,
+            // headerRight: () => <Button title="Home" onPress={() => ''} />,
+          }}>
+          <Stack.Screen
+            name="Signin"
+            component={SigninPage}
+            // options={{
+            //   title: 'Sign in Page',
+            //   headerTintColor: 'red',
+            //   headerStyle: {
+            //     backgroundColor: 'aqua',
+            //   },
+            // }}
+          />
+          <Stack.Screen
+            name="Home"
+            component={HomePage}
+            // options={{headerShown: false}}
+          />
+          <Stack.Screen name="Projects" component={ProjectsPage} />
+          <Stack.Screen name="About" component={AboutPage} />
+        </Stack.Navigator> */}
+      </NavigationContainer>
+    </>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    alignItems: 'center',
-
-    backgroundColor: '#f0f4f8',
-  },
-  title: {
-    fontSize: 28,
-    color: '#0f172a',
-    marginBottom: 10,
-    textAlign: 'center',
-    fontFamily: 'NotoSerifBengali-Regular',
-  },
-  subtitle: {
-    fontSize: 18,
-    color: '#374151',
-    marginBottom: 20,
-    textAlign: 'center',
-    fontFamily: 'NotoSerifBengali-Regular',
-  },
-  description: {
-    fontSize: 16,
-    color: '#4b5563',
-    textAlign: 'center',
-    marginBottom: 40,
-    lineHeight: 24,
-    fontFamily: 'NotoSerifBengali-Regular',
-  },
-  button: {
-    backgroundColor: '#0f172a',
-    paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 8,
-    fontFamily: 'NotoSerifBengali-Regular',
-  },
-  buttonText: {
-    color: '#ffffff',
-    fontSize: 16,
-    fontFamily: 'NotoSerifBengali-Regular',
-  },
-});
-
-export default HomeScreen;
+export default App;
